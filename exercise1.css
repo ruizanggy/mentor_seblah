@@ -1,0 +1,60 @@
+.kotak{
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.header{
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.apaja{
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 200;
+}
+
+.tombol{
+    background-color: rgb(105, 105, 231);
+    border: 6px solid black;
+    border-style: double;
+    border-radius: 5px;
+}
+.tombol:hover{
+    background-color: blueviolet;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.8);
+}
+.white{
+    color: white;
+    width: 200px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 20px;
+}
+
+.tabel1, th, td{
+    /* class tabel satu elemen th dan td */
+    /* untuk shortcut */
+    border: 2px solid black;
+    /* width: 600px; */
+    font-family: 'Times New Roman', Times, serif;
+    border-collapse: collapse;
+    /* untuk memnggabungkan tabel */
+    background-color: orange;
+    text-align: center;
+}
+
+.tabel1 img{
+    /* bacanya itu class tabel untuk yang image */
+    width: 150px;
+    height: 100px;
+}
+/* class 1 elemen img kaya array ngambil yang dalem */
+

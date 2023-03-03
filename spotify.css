@@ -1,0 +1,153 @@
+/* dalam html itu ada margin yang undifined oleh karena itu biar ilangin margin bawain */
+*{
+    margin: 0;
+    padding: 0;
+}
+/* kalo kek gini dia mepet keatas */
+
+/* body{
+    background-color: red;
+}
+
+h1{
+    font-family: 'Tilt Prism', cursive;;
+}
+
+p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500
+} */
+
+/* div itu satu kotak pokonya */
+/* cara bagi dua layar pake split array */
+
+    
+@font-face {
+    font-family: "spotify";
+    src: url(./Spotify-Font/GothamBold.ttf);
+}
+/* ini hanya untuk ngedeclare */
+
+
+body{
+    font-family: "spotify";
+}
+
+
+
+
+
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    /* bikin kesamping */
+    padding: 0 200px;
+    /* angka awal itu untuk atas bawah dan angka kedua untuk kanan kiri */
+    /* begitu juga penggunaan */
+    background-color: black;
+    color: white;
+    height: 70px;
+    align-items: center;
+    position: relative;
+    /* ini untuk atur barnya */
+    z-index: 100;
+    
+    /* lebar layar 100 % */
+
+}
+/* @media only screen and (max-width:600px){
+    #navbar{
+        fl;
+    }
+} */
+#nav-geser{
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+#paket{
+    text-align: left;
+    background-color: blueviolet;
+    color: white;
+    /* height: 500px; */
+    padding: 80px 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    line-height: 40px;
+    /* line height semisal dia ada nimpa diubah satu jarak textnya dan biasanya kalo fontnya ganti */
+    /* z-index: 0; */
+    /* z index unutk elemen lebih menonjol dr yang lain seperti popup */
+    /* border: 2px solid black;
+    margin: 10px ; */
+}
+
+#buton{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.mul{
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    padding: 13px 25px;
+}
+.mul:hover{
+    background-color: rgb(60, 57, 57);
+    cursor: pointer;
+    transition: 0.3;
+}
+
+.lih{
+    border: 1px solid white;
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 13px 27px;
+    color: white;
+}
+.lih:hover{
+    background-color: white;
+    color: black;
+    transition: 0.3;
+}
+
+#syarat{
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+}
+
+#tiga{
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    line-height: 50px;
+    color: white;
+    padding: 80px 200px;
+    gap: 30;
+    justify-content: center;
+    text-align: center;
+}
+
+#tom{
+    border: none;
+    border-radius: 25px;
+    color: black;
+    padding: 15px 30px;
+    transition: 3.0s;
+}
+
+#tom:hover{
+    transform: scale(1);
+}
+
+/* media screen untuk ngaturnya */
+
+/* buat portolio di exercise 3  */
+/* pak sandika galih jelasin flex grid sebagai refrensi untuk memperdalam */

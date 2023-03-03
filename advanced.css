@@ -1,0 +1,172 @@
+/* MEDIA QUERIES
+untuk membuat website yang responsive */
+body{
+    background-color: white;
+    text-align: center;
+}
+.sample-text{
+    color: red;
+    font-size: 20px;
+}
+/* warna tetap ngikutin sample text
+kalo fontsize ngikutin yang dimedia beda ama warna */
+
+
+@media only screen and (max-width: 600px) {
+    /* ada breakpointnya di materi untuk menunjukkan dari berapa ke berapa untuk ukurannya */
+    /* bacanya = ketika media dia cuma di screen dan dia juga min/ma widthnya berapa(sesuaikan dengan kebutuhan desainer apakah untuk web, mobile, dan lainnya)*/
+
+    /* dia baru akan berubah ketika web dalam kondisi 600px */
+    /* untuk ngecek di titik 3 -> more tools ->developer tool->toggle device 
+    diatasnya dikasu tau ukuran untuk tablet, mobile, dan leptop*/
+    body {
+      background-color: blue;
+      font-size: 10px;
+    }
+    /* ketika sudat di max width 600px maka fontsize akan mengikuti */
+  }
+  /* kaya if statement */
+
+  /* bisa juga not only */
+  /* untuk conditional juga jika screen berapa maka fontsizenya disesuaikan */
+
+  /* kalo beda ukuran lagi maka buat lagi media screennya dan sesuaikan fontnya */
+  /* dari gede web kekecil mobile */
+  @media only screen and (max-width: 768px) {
+    .sample-text{
+        font-size: 20px;
+    }
+  }
+  /* --------------------------------------------------------------------- */
+  /* GRID, cara untuk mengatur untuk tampilan 2D / membuat layout dgn CSS*/
+/* untuk mengubah jadi grid maka ubah induknya yaitu idnya */
+#content{
+    max-width: 960px;
+    /* ukuran */
+    margin: 0 auto; 
+    /* 0(jarak atas bawah 0) dan auto(kanan kiri auto sama jaraknya) */
+    display: grid;
+    /* ada 3 cara untuk mengatur grid tamplate */
+    /* grid-template-columns: 30% 30% 30%; ini cara satu */
+    grid-template-columns: 1fr 1fr 1fr;
+    /* row juga bisa diatur */
+    grid-template-rows: 1fr 1fr 1fr;
+    /* grid-template-columns: repeat(3, 1fr); cara 3 tetapi kekurangannya gabisa nentuin fraction yang beda*/
+    /* membentuk gap antar kotak */
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+#content div{
+    /* id content bagian div di style .itu cara bacanya  */
+    background-color: blue;
+    padding: 30px;
+}
+
+#content :nth-child(even){
+    background-color: gray;
+}
+
+/* untuk ngestyle si kolomnya biar colspan/ makan ke samping */
+.kotak1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+/* ini untuk span harus dipisah */
+.kotak2{
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+/* div biasanya untuk styling */
+/* grid dan flex pake div */
+/* tailwin lebih singkat */
+/* control+d untuk menghapus */
+
+#Kenapa-beli-Premium{
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   column-gap: 10px;
+   max-width: 1200px;
+    margin: 0 auto;
+}
+/* ini bikin 4 column grid dengan gap 10 dan lebar 1200px dan margin kanan kiri atas bawah rata */
+
+@media only screen and (max-width:768px){
+    #Kenapa-beli-Premium{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+/* ketika layar sudah di 768px maka columnya menjadi 2 2 */
+
+@media only screen and (max-width:600px){
+    #Kenapa-beli-Premium{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+/* ketika layar sudah di 768px maka columnya menjadi 1 1 */
+
+
+
+#kenapa-beli-Premium div{
+    min-height: 500px;
+}
+/* tolond id kenapa beli premium yang divnya diatur tingginya 100px */
+.card{
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+}
+/* class card untuk mengatur gridnya kebawah dia didisplay grid lalu row span sebanyak 2fr untuk gambar dan 1 fr untuk head dan p */
+.image{
+    margin: auto;
+}
+/* class image untuk mengatur jarak margis supaya dia rata kanan kiri */
+
+#main{
+    display: flex;
+    flex-direction: row;
+    /* disini rownya baris */
+    justify-content: space-around;
+    /* justify content inilah yang bisa dibilang rigid dan da mengatur tata letak si konten flexnya */
+    /* nanti kulik lagi ada banyak cara nyusul konten */
+}
+
+#main div{
+    width: 50px;
+    height: 50px;
+    transition: 0.5s;
+    /* untuk ngatur smooth */
+}
+/* untuk buat animasi pake hover */
+#main div:hover{
+    width: 60px;
+    height: 60px;
+    transform: rotate(45deg);
+}
+
+.description{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+button{
+    background-color: lightblue;
+    border: 2px solid lightgray;
+    border-radius: 10px;
+    /* radius untuk menumpulkan garisnya */
+    padding: 15px 30px;
+    /* 15px untuk height dan 30px untuk width */
+    font-size: 20px;
+    transition: 0.5s;
+}
+
+button:hover{
+    background-color: brown;
+    cursor: pointer;
+    /* biar bisa diklik */
+    color: green;
+    /* ini colornya buat ubah situlisnnya */
+}
+
+/* hover sering digunakan */
